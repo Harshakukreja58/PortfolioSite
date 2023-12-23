@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harsha Kukreja-Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,400;1,700&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(1, 1, 36);
+            color: white;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 80px;
+            background-color: rgb(19, 19, 86);
+            color: white;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            list-style: none;
+            display: flex;
+            padding: 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav ul li a:hover {
+            color: rgb(161, 161, 226);
+            font-size: 1.05rem;
+        }
+
+        main hr {
+            border: 0;
+            background-color: white;
+            height: 1.4px;
+            margin: 60px 84px;
+        }
+
+        .left {
+            font-size: 1.8rem;
+        }
+
+        .firstSection {
+            display: flex;
+            justify-content: space-around;
+            margin: 30px 0;
+            margin-bottom: 55px;
+            align-items: center;
+        }
+
+        .firstSection>div {
+            width: 30%;
+
+        }
+
+        .leftSection {
+
+            font-size: 2.8rem;
+
+        }
+
+        .rightSection img {
+            width: 90%;
+            margin: 30px 0;
+        }
+
+        .purple {
+            color: blueviolet;
+        }
+
+        .text-grey {
+            color: grey
+        }
+
+        #element {
+            color: blueviolet;
+        }
+
+        .secondSection {
+            max-width: 80vw;
+            margin: auto;
+            height: 130vh
+        }
+
+        .secondSection h1 {
+            font-size: 2rem;
+        }
+
+        .secondSection .box {
+            background-color: white;
+            width: 80vw;
+            height: 2px;
+            margin: 57px 0;
+            display: flex;
+        }
+
+        .secondSection .vertical {
+            height: 85px;
+            width: 1px;
+            background-color: white;
+            margin: 0 300px;
+        }
+
+        .image-top {
+            width: 30px;
+            position: relative;
+            top: -40px;
+            left: -11px
+        }
+
+        .vertical-title {
+            position: relative;
+            top: 60px;
+            width: 350px;
+        }
+
+        .vertical-description {
+            position: relative;
+            top: 85px;
+            width: 200px
+        }
+
+        .vertical-2 {
+            height: 85px;
+            width: 1px;
+            background-color: white;
+            margin: 0 260px;
+        }
+
+        .image-2 {
+            width: 87px;
+            position: relative;
+            top: -38px;
+            left: -31px;
+        }
+
+        .vertical-title2 {
+            position: relative;
+            top: 60px;
+            width: 350px;
+        }
+
+        .vertical-description2 {
+            position: relative;
+            top: 85px;
+            width: 240px;
+        }
+
+        .thirdSection {
+            max-width: 80vw;
+            margin: auto;
+            height: 105vh
+        }
+
+        .thirdSection h1 {
+            font-size: 2rem;
+            margin-bottom: 35px;
+        }
+
+        .thirdSection .skills-list {
+            display: grid;
+
+
+        }
+
+        .flip-card {
+            background-color: transparent;
+            width: 140px;
+            height: 120px;
+            border: 1px solid #f1f1f1;
+            perspective: 1000px;
+            /* Remove this if you don't want the 3D effect */
+        }
+
+        /* This container is needed to position the front and back side */
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+        }
+
+        /* Do an horizontal flip when you move the mouse over the flip box container */
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        /* Position the front and back side */
+        .flip-card-front,
+        .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            /* Safari */
+            backface-visibility: hidden;
+        }
+
+        /* Style the front side (fallback if image is missing) */
+        .flip-card-front {
+            background-color: rgb(255, 253, 254);
+            color: black;
+        }
+
+        /* Style the back side */
+        .flip-card-back {
+            background-color: rgb(47, 44, 65);
+            color: white;
+            transform: rotateY(180deg);
+        }
+
+        .fourthSection {
+            max-width: 80vw;
+            margin: auto;
+            height: 70vh
+        }
+
+        .fourthSection h1 {
+            font-size: 2rem;
+            margin-bottom: 35px;
+        }
+
+        .fifthSection {
+            max-width: 80vw;
+            margin: auto;
+            height: 230vh
+        }
+
+        .fifthSection h1 {
+            font-size: 2rem;
+            margin-bottom: 35px;
+        }
+
+        .sixthSection {
+            max-width: 80vw;
+            margin: auto;
+            height: 50vh
+        }
+
+        .sixthSection h1 {
+            font-size: 2rem;
+            margin-bottom: 35px;
+        }
+
+        .sixthSection .box6 {
+            background-color: white;
+            width: 80vw;
+            height: 2px;
+            margin: 57px 0;
+            display: flex;
+        }
+
+        .sixthSection .vertical {
+            height: 85px;
+            width: 1px;
+            background-color: white;
+            margin: 0 150px;
+        }
+
+        .edu-title {
+            position: relative;
+            top: 85px;
+            width: 250px;
+            margin-left: -66px;
+        }
+
+        .edu-subtitle {
+            position: relative;
+            top: 80px;
+            width: 250px;
+            margin-left: -23px
+        }
+
+        .edu-description {
+            position: relative;
+            top: 77px;
+            width: 250px;
+            margin-left: -77px
+        }
+
+        .seventhSection {
+            max-width: 80vw;
+            margin: auto;
+            height: 40vh
+        }
+
+        .seventhSection h1 {
+            font-size: 2rem;
+            margin-bottom: 35px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">Harsha's Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#secondSection">Work Experience</a></li>
+                    <li><a href="#thirdSection">Skills</a></li>
+                    <li><a href="#fourthSection">Services</a></li>
+                    <li><a href="#fifthSection">Projects</a></li>
+                    <li><a href="#seventhSection">Contact me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="firstSection">
+            <div class="leftSection">
+                Hi, My name is<span class="purple"> Harsha</span>
+                <div>I am a budding web developer</div>
+                <span id="element"></span>
+            </div>
+            <div class="rightSection">
+                <image src="bg5.png" alt=""></image>
+            </div>
+        </section>
+        <hr>
+        <section class="secondSection">
+            <h1>Work Experience</h1>
+            <span class="text-gray">What I have done so far</span>
+            <div class="box">
+                <div class="vertical">
+                    <img class="image-top" src="intern.png" alt="">
+                    <h2 class="vertical-title" style="margin-left:-100px">
+                        Intern at SB Accociates
+                    </h2>
+                    <div class="vertical-description" style="margin-left:-70px">Key Responsibilities:<br>
+                        -Accounting for Small and Medium Size Entities. using tally erp<br>
+                        -Performing audit for Sales, Purchases etc.<br>
+                        -Performed complete audit for School with team.<br>
+                    </div>
+                </div>
+                <div class="vertical-2">
+                    <img class="image-2" src="accenture2.png" alt="">
+                    <h2 class="vertical-title2" style="margin-left:-100px">
+                        Accountant at Accenture
+                    </h2>
+                    <div class="vertical-description2" style="margin-left:-70px">Worked as real estate accountant
+                        performed various activities
+                        like:<br>
+                        - Accounting for the payment made to landlord for the store premises.<br>
+                        - Preparing & uploading the journal entries for the respective payment types in Oracle.<br>
+                        - Performing Intercompany journal Entry for the client.<br>
+                        - Reconciliation of the accrual balances on month on month basis.<br>
+                        - Responsible for monthly and quarterly close activities.<br>
+                        - Processed invoices using Oracle and JDA and pushed them for payment.<br>
+                        - Prepared fright packages in case the shipment was not received to stores.<br>
+                        - After performing various inspections creating vendor as per request in using Oracle.<br>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+        <hr>
+        <section class="thirdSection">
+            <div class="three">
+                <h1>Skills</h1>
+                <div class="skills-list"
+                    style="display: grid;grid-template-columns: auto auto auto; gap:15px; align-items: center;margin-left: 95px;">
+                    <!-- html -->
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="html.png" alt="html" style="width:98px;height:98px;margin-top: 4px;">
+                            </div>
+                            <div class="flip-card-back">
+                                <h3>HTML</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- css -->
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="css.png" alt="css" style="width:98px;height:98px;margin-top: 4px;">
+                            </div>
+                            <div class="flip-card-back">
+                                <h3>CSS</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- js -->
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="js.png" alt="javascript" style="width:98px;height:98px;margin-top: 4px;">
+                            </div>
+                            <div class="flip-card-back">
+                                <h3>JavaScript</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- bootstrap -->
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="bootstrap.png" alt="bootstrap"
+                                    style="width:98px;height:98px;margin-top: 4px;">
+                            </div>
+                            <div class="flip-card-back">
+                                <h3>Bootstrap</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- react -->
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="react.png" alt="react" style="width:98px;height:98px;margin-top: 4px;">
+                            </div>
+                            <div class="flip-card-back">
+                                <h3>React</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- axios -->
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="axios.png" alt="axios" style="width:98px;height:98px;margin-top: 4px;">
+                            </div>
+                            <div class="flip-card-back">
+                                <h3>Axios</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- redux -->
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="redux.png" alt="redux" style="width:98px;height:98px;margin-top: 4px;">
+                            </div>
+                            <div class="flip-card-back">
+                                <h3>Redux</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- node -->
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="nodejs.png" alt="node" style="width:98px;height:98px;margin-top: 4px;">
+                            </div>
+                            <div class="flip-card-back">
+                                <h3>NodeJs</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- express -->
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="express-js.png" alt="Express" style="width:98px;height:98px;margin-top: 4px;">
+                            </div>
+                            <div class="flip-card-back">
+                                <h3>Express</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- mongo -->
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="mongo.png" alt="mongo" style="width:98px;height:98px;margin-top: 4px;">
+                            </div>
+                            <div class="flip-card-back">
+                                <h3>MongoDb</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- sql -->
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="sql.png" alt="Sql" style="width:98px;height:98px;margin-top: 4px;">
+                            </div>
+                            <div class="flip-card-back">
+                                <h3>Sql</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- jwt -->
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="jwt.png" alt="Jwt" style="width:98px;height:98px;margin-top: 4px;">
+                            </div>
+                            <div class="flip-card-back">
+                                <h3>JWT</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- bcrypt -->
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="bcrypt.png" alt="Bcrypt" style="width:120px;height:98px;margin-top: 4px;">
+                            </div>
+                            <div class="flip-card-back">
+                                <h3>Bcrypy</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- postman-->
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="postman.png" alt="postman" style="width:98px;height:98px;margin-top: 4px;">
+                            </div>
+                            <div class="flip-card-back">
+                                <h3>postman</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- git -->
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="git.png" alt="git" style="width:98px;height:98px;margin-top: 4px;">
+                            </div>
+                            <div class="flip-card-back">
+                                <h3>GitHub</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
+        <hr>
+        <section class="fourthSection">
+            <div class="four">
+                <h1>Services</h1>
+                <div class="service-list"
+                    style="display: grid;grid-template-columns: auto auto auto ; gap:30px; align-items: center;margin-left: 95px;">
+                    <!-- frontend -->
+                    <div class="card" style="width: 18rem;">
+                        <img src="frontend.png" class="Frontend-Services" alt="...">
+                        <div class="card-body" style="height:130px">
+                            <p class="card-text" style="font-size: 17.5px;">We craft intrutive and responsive user
+                                friendly
+                                UI websites which are compitable with all devices</p>
+                        </div>
+                    </div>
+                    <!-- backend -->
+                    <div class="card" style="width: 18rem;">
+                        <img src="backend.png" class="Backend-Services" alt="...">
+                        <div class="card-body">
+                            <p class="card-text">We build robust and secure backends and RestAPI's for seamless dataflow
+                                and
+                                efficient functionality</p>
+                        </div>
+                    </div>
+                    <!-- fullstack -->
+                    <div class="card" style="width: 18rem;">
+                        <img src="fullstack.png" class="Full Stack Services" alt="...">
+                        <div class="card-body">
+                            <p class="card-text" style="font-size: 15px;"> using MERN Stack we transform your ideas into
+                                dynamic web applications
+                                with
+                                a focus on user-centric design and powerful functionality</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+        <hr>
+
+        <section class="fifthSection">
+            <div class="five">
+                <h1>Projects</h1>
+                <div class="project-list"
+                    style="display: grid;grid-template-columns: auto auto auto auto ; gap:25px; align-items: center;margin-left: 65px;">
+                    <!-- ecomm -->
+                    <div class="card" style="width: 18rem;">
+                        <img src="ecomm.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">E-Commerce Site</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the card's content.</p>
+                            <a href="#" class="btn btn-primary" style="width:45%">site</a>
+                            <a href="#" class="btn btn-primary" style="width:45%">Git</a>
+                        </div>
+                    </div>
+                    <!-- chat  -->
+                    <div class="card" style="width: 18rem;">
+                        <img src="chat.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Chat-App</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the card's content.</p>
+                            <a href="#" class="btn btn-primary" style="width:45%">site</a>
+                            <a href="#" class="btn btn-primary" style="width:45%">Git</a>
+                        </div>
+                    </div>
+                    <!-- texteditor -->
+                    <div class="card" style="width: 18rem;">
+                        <img src="text.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Text-Editor</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the card's content.</p>
+                            <a href="#" class="btn btn-primary" style="width:45%">site</a>
+                            <a href="#" class="btn btn-primary" style="width:45%">Git</a>
+                        </div>
+                    </div>
+                    <!-- text-todo -->
+                    <div class="card" style="width: 18rem;">
+                        <img src="todo.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Todo App</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the card's content.</p>
+                            <a href="#" class="btn btn-primary" style="width:45%">site</a>
+                            <a href="#" class="btn btn-primary" style="width:45%">Git</a>
+                        </div>
+                    </div>
+                    <!-- expense management -->
+                    <div class="card" style="width: 18rem;">
+                        <img src="budget.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Expense Management App</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the card's content.</p>
+                            <a href="#" class="btn btn-primary" style="width:45%">site</a>
+                            <a href="#" class="btn btn-primary" style="width:45%">Git</a>
+                        </div>
+                    </div>
+                    <!-- email validator -->
+                    <div class="card" style="width: 18rem;">
+                        <img src="email.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Email Validator</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the card's content.</p>
+                            <a href="#" class="btn btn-primary" style="width:45%">site</a>
+                            <a href="#" class="btn btn-primary" style="width:45%">Git</a>
+                        </div>
+                    </div>
+                    <!-- ytsubs -->
+                    <div class="card" style="width: 18rem;">
+                        <img src="youtube.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Get Youtube Subscribers</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the card's content.</p>
+                            <a href="#" class="btn btn-primary" style="width:45%">site</a>
+                            <a href="#" class="btn btn-primary" style="width:45%">Git</a>
+                        </div>
+                    </div>
+                    <!-- flashcard -->
+                    <div class="card" style="width: 18rem;">
+                        <img src="flashcard.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Flashcard Generator</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the card's content.</p>
+                            <a href="#" class="btn btn-primary" style="width:45%">site</a>
+                            <a href="#" class="btn btn-primary" style="width:45%">Git</a>
+                        </div>
+                    </div>
+                    <!-- calculator -->
+                    <div class="card" style="width: 18rem;">
+                        <img src="calculator.webp" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">calculator</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the card's content.</p>
+                            <a href="#" class="btn btn-primary" style="width:45%">Preview</a>
+                            <a href="#" class="btn btn-primary" style="width:45%">Git</a>
+                        </div>
+                    </div>
+                    <!-- signup form -->
+                    <div class="card" style="width: 18rem;">
+                        <img src="signup.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Registration form</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the card's content.</p>
+                            <a href="#" class="btn btn-primary" style="width:45%">Preview</a>
+                            <a href="#" class="btn btn-primary" style="width:45%">Git</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <hr>
+        <Section class="sixthSection">
+            <h1>Education</h1>
+            <div class="box6">
+                <div class="vertical">
+                    <h2 class="edu-title">SSC-2015</h2>
+                    <h6 class="edu-subtitle">76.5%</h6>
+                    <div class="edu-description">Holy Family Convent high School, Ulhasnagar</div>
+                </div>
+                <div class="vertical">
+                    <h2 class="edu-title">HSC-2017</h2>
+                    <h6 class="edu-subtitle">80%</h6>
+                    <div class="edu-description">C.H.M college,Ulhasnagar</div>
+                </div>
+                <div class="vertical">
+                    <h2 class="edu-title">B.com-2020</h2>
+                    <h6 class="edu-subtitle">(8.4 CGPA)</h6>
+                    <div class="edu-description">University of Mumbai</div>
+                </div>
+                <div class="vertical">
+                    <h2 class="edu-title">M.com-2023</h2>
+                    <h6 class="edu-subtitle">Awating result</h6>
+                    <div class="edu-description" style="margin-left:15px">IDOL</div>
+                </div>
+            </div>
+        </Section>
+        <hr>
+        <section class="seventhSection">
+            <h1>Personal Details</h1>
+            <Div class="h5"> Name: Harsha Kukreja</Div><br>
+            <Div Class="h5">Email id: harshakukreja0899@gmail.com</Div><br>
+            <Div Class="h5">Contact: +91 9326088288</Div><br>
+            <Div class="h5">Hobbies: Reading,cooking,Listening music,Photography</Div><br>
+        </section>
+        <hr>
+        <footer>
+            <div class="finalSection" style="margin-left: 600px;">Images belong to respective owners </div>
+            <!-- <img class="copyright" src="copyright.png" alt=""> -->
+        </footer>
+        <hr>
+
+    </main>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <!-- Setup and start animation! -->
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Web Desginer', 'Full Stack developer', 'javaScript developer', 'React developer', 'Accountant', 'Artist'],
+            typeSpeed: 50,
+        });
+
+
+    </script>
+</body>
+
+</html>
